@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
+  resources :stations
   resources :uls
   resources :trains
-  resources :stops
   resources :subways
   resources :updates
   resources :users
