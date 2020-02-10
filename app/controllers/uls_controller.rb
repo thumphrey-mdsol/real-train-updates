@@ -1,0 +1,2 @@
+class UlsController < ApplicationController
+end

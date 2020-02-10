@@ -1,0 +1,2 @@
+class Ul < ApplicationRecord
+end
