@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2020_02_10_183604) do
   end
 
   create_table "trains", force: :cascade do |t|
-    t.integer "stop_id"
+    t.integer "station_id"
     t.integer "subway_id"
     t.string "destination"
     t.string "stop_time"
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2020_02_10_183604) do
 
   create_table "uls", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "location_id"
+    t.integer "station_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
