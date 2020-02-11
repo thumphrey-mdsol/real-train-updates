@@ -23,7 +23,7 @@ subway_names = ["1","2","A","3","Q","4","S","5","R","W"]
 
 puts "seeding primary models"
 10.times do
-    User.create(user_name: Faker::Name.name, password: "BEEF")
+    User.create(user_name: Faker::Name.name, password: "BEEF", email: Faker::Internet.email)
     Station.create(name: Faker::Address.street_address)
     Subway.create(name: subway_names.sample, color: Faker::Color.color_name, img: Faker::Avatar.image)
 end

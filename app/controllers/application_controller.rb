@@ -1,11 +1,18 @@
 class ApplicationController < ActionController::Base
-    def new
-       
-    end
-    
-    def create
-        session[:user_id] = user_id
-    end
     
 
+    def current_user
+        if session[:user_id]
+            User.find(session[:user_id])
+        end
+    end
+
+    def logged_in?
+        current_user
+    end
+    
+    def authorized
+        redirect_to "/login" unless logged_in? 
+    end
+    
 end
