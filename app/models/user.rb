@@ -4,4 +4,7 @@ class User < ApplicationRecord
     has_many :subways, through: :updates
     has_many :uls
     has_many :stations, through: :uls
+
+    validates :user_name, uniqueness: true
+    validates :email, presence: true
 end
