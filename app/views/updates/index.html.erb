@@ -1,0 +1,7 @@
+<h1> Updates </h1>
+
+<% @updates.each do |update| %>
+    <div class="container p-3 my-3 bg-dark text-white">
+    <h6><%= link_to update.subway.name, update%> line status: </h6>
+    <p>Delayed: <%= update.delayed%></p></div>
+<%end %>

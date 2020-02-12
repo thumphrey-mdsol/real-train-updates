@@ -1,6 +1,10 @@
 <h1>User Page</h1>
 
 <%=@user.user_name%>
+<%@stations.each do |station|%>
+    <%=station.name%>
+<%end%>
 
 
-<%= button_to  "Logout", logout_path, method: :destroy %>
+
+
